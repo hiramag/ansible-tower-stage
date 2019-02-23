@@ -10,5 +10,5 @@ RUN tar xvf ansible-tower-setup-latest.tar.gz -C /var/tank/ansible-tower-setup -
     && rm -f /var/tank/ansible-tower-setup-latest.tar.gz \                                              
 EXPOSE 80                                                                                               
 EXPOSE 443                                                                                              
-COPY ./assets/inventory /var/tank/ansible-tower-setup/inventory                                         
+COPY ./inventory /var/tank/ansible-tower-setup/inventory                                         
                                                                                                         
