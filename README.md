@@ -1,2 +1,2 @@
 # ansible-tower-stage
-Staging files to install Ansible Tower Binaries
+Staging files to install Ansible Tower binaries
