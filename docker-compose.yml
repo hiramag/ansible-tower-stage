@@ -1,0 +1,19 @@
+version: '3.6'                                                           
+services:                                                                
+  tower:                                                                 
+    privileged: true                                                     
+    hostname: tower                                                      
+    image: hiramag/ansible-tower-stage:3.4.1                             
+    build: .                                                             
+    ports:                                                               
+      - "8443:443"                                                       
+      - "8080:80"                                                        
+    volumes:                                                             
+      - tower-projects:/var/lib/awx/projects                             
+      - tower-postgres:/var/lib/postgresql/9.6/main                      
+      - type=bind, source=/sys/fs/cgroup, target=/sys/fs/cgroup          
+    entrypoint: /usr/lib/systemd/systemd                                 
+volumes:                                                                 
+  tower-postgres:                                                        
+  tower-projects:                                                        
+                                                                         
