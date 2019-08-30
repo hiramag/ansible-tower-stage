@@ -1,6 +1,8 @@
 # ansible-tower-stage
 Staging files to install Ansible Tower binaries
 
+updated 8/29/2019
+
 This Dockerfile preps a container for a single instance install of Ansible Tower on a CentOS 7.6 container.
 All required binaries picked up and autobuilt at docker cloud.
 
